@@ -5,6 +5,7 @@
 
 ## Description
 Retro Pong Go! Where winning 2 rounds gives you the WIN!
+![image](https://github.com/user-attachments/assets/8482c08f-4efc-43f5-9cf9-52a7544682ca)
 
 ## Features
 - Feature 1
