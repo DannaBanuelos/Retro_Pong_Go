@@ -10,16 +10,16 @@ Retro Pong Go! Where winning 2 rounds gives you the WIN!
 - Feature 1
 	- A game for 2 players competing against each other.
 - Feature 2
-	- a ball will be bouncing around the game area non-stopping and players must hit it with their own paddle. 
+	- A ball will be bouncing around the game area non-stopping and players must hit it with their own paddle. 
 - Feature 3
 	- Each player must hit the other players’ wall to win a point!
 - Feature 4
-	- each player must win 5 points to win a match, and each player must win 2 matches to win the GAME!
+	- Each player must win 5 points to win a match, and each player must win 2 matches to win the GAME!
 
 
 ## Challenges
-- 
 - Players must get at least 5 points to win a match, but this won’t give them the final win
+- if a player loses 2 consecutive matches, they lose the game
 - Each player must be smart and skilled in moving their paddle to be able to reach the ball in time.
 
 
@@ -29,6 +29,7 @@ Ideal Outcome:
 
 Minimal Viable Outcome:
 - Clear goals and communication, everyone knows what they want to achieve and how to share it with others.
+
 
 ## Milestones
 - Week 1
@@ -46,4 +47,5 @@ Minimal Viable Outcome:
 2.	The game continues to a new level. If 1 of the players hits 5 points first in 2 consecutive levels, the player wins; else, a third level is added, and the first player to get 5 points wins the game.
 3.	Adding sound to the game when the ball hits a paddle, the wall, and when a point is added
 4.	The game prints the results and gives the option to either quit or restart the game.
+
 
