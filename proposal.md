@@ -9,11 +9,11 @@
 
 ## Features
 - Interactive Virtual Board 
-	- Generates a virtual Board using Python pygame 
+	- Generates a virtual Board using Python `pygame` 
 - Interactive Audio Input
-	- Game plays sound when interacting with its environment using pyaudio/ sounddevice 
+	- Game plays sound when interacting with its environment using `pyaudio`/ `sounddevice` 
 - Level Up
-	- Game level up 1 level each time a player wins a match with pygame
+	- Game level up 1 level each time a player wins a match with `pygame`
 - Point Counter
 	- Each player must win 5 points to win a match, and each player must win 2 matches to win the GAME!
 
