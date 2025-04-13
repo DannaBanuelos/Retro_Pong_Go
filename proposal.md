@@ -3,7 +3,7 @@
 ## Repository
 <https://github.com/DannaBanuelos/Retro_Pong_Go.git >
 
-## Retro Pong Go! is a virtual Ping Pong game that pits 2 players against each other. Based on the famous Pong from Atari, this game creates an interactive board where points are counted and the level rises until there's a WINNER!
+## Retro Pong Go! A virtual Ping Pong game that puts 2 players against each other. Based on the famous Pong from Atari, this game creates an interactive board where points are counted and the level rises until there's a WINNER!
 
 ![image](https://github.com/user-attachments/assets/8482c08f-4efc-43f5-9cf9-52a7544682ca)
 
