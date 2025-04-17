@@ -1,4 +1,4 @@
-# Retro_Pong_Go!🏓
+# Retro_Pong_GO!🏓
 
 ## Repository
 <https://github.com/DannaBanuelos/Retro_Pong_Go.git >
