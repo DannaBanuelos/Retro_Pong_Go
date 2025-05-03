@@ -11,7 +11,7 @@
 - Interactive Virtual Board 
 	- Generates a virtual Board using Python `pygame` 
 - Interactive Audio Input
-	- Game plays sound when interacting with its environment using `pyaudio`/ `windsound` 
+	- Game plays sound when interacting with its environment using `pyaudio`/ `pygame.mixer` 
 - Level Up
 	- Game level up 1 level each time a player wins a match with `pygame`
 - Point Counter

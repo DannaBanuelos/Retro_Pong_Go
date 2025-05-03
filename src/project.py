@@ -1,6 +1,6 @@
 import pygame
-import winsound
 pygame.init()
+pygame.mixer.init()
 
 #Canvas design
 pygame.display.set_caption("Retro Pong GO!🏓")
@@ -17,6 +17,13 @@ Green = (0, 255, 0)
 Score_font = pygame.font.SysFont("Impact", 50)
 Winning_score = 5
 level = 1
+
+#Sound
+SOUND_DIR = "sounds/"
+bounce_sound = pygame.mixer.Sound(SOUND_DIR + "Bounce.wav")
+point_sound = pygame.mixer.Sound(SOUND_DIR + "Point.wav")
+winner_sound = pygame.mixer.Sound(SOUND_DIR + "Winner.wav")
+final_win_sound = pygame.mixer.Sound(SOUND_DIR + "Game Final Win.wav")
 
 class Paddle: 
     Speed = 5
@@ -105,16 +112,16 @@ def draw(screen, paddles, ball, left_score, right_score, level):
 def handle_collision(ball, left_paddle, right_paddle):
     if ball.y + ball.radius >= height:
         ball.y_speed *= -1
-        winsound.PlaySound("Bounce.wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
+        bounce_sound.play()
     elif ball.y - ball.radius <=0:
         ball.y_speed *= -1
-        winsound.PlaySound("Bounce.wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
+        bounce_sound.play()
 
     if ball.x_speed < 0:
         if ball.y >= left_paddle.y and ball.y <= left_paddle.y + left_paddle.height:
             if ball.x - ball.radius <= left_paddle.x + left_paddle.width:
                 ball.x_speed *= -1
-                winsound.PlaySound("Bounce.wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
+                bounce_sound.play()
 
                 middle_y = left_paddle.y + left_paddle.height / 2
                 diff_in_y = middle_y - ball.y
@@ -126,7 +133,7 @@ def handle_collision(ball, left_paddle, right_paddle):
         if ball.y >= right_paddle.y and ball.y <= right_paddle.y + right_paddle.height:
             if ball.x + ball.radius >= right_paddle.x: 
                 ball.x_speed *= -1
-                winsound.PlaySound("Bounce.wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
+                bounce_sound.play()
 
                 middle_y = right_paddle.y + right_paddle.height / 2
                 diff_in_y = middle_y - ball.y
@@ -202,25 +209,25 @@ def main(): #Canvas & Paddles designs
 
             if ball.x < 0:
                 right_score += 1
-                winsound.PlaySound("Point.wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
+                point_sound.play()
                 ball.reset()
             elif ball.x > width:
                 left_score += 1
-                winsound.PlaySound("Point.wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
+                point_sound.play()
                 ball.reset()
 
             won = False
             if left_score >= Winning_score:
                 won = True
                 win_text = "Player 1 WINS!"
-                winsound.PlaySound("Winner.wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
+                winner_sound.play()
                 left_consecutive_wins += 1
                 right_consecutive_wins = 0
                 
             elif right_score >= Winning_score:
                 won = True
                 win_text = "Player 2 WINS!"
-                winsound.PlaySound("Winner.wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
+                winner_sound.play()
                 right_consecutive_wins += 1
                 left_consecutive_wins = 0
                 
@@ -236,7 +243,7 @@ def main(): #Canvas & Paddles designs
                     final_text = "Player 1 Wins the GAME!" if left_consecutive_wins == 2 else "Player 2 Wins the GAME!"
                     result = Score_font.render(final_text, 1, White)
                     screen.blit(result, (width//2 - result.get_width()//2, height//2 - result.get_height()//2))
-                    winsound.PlaySound("Game Final Win.wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
+                    final_win_sound.play()
                     pygame.display.update()
                     pygame.time.delay(3000)
                     run = False 
@@ -245,7 +252,7 @@ def main(): #Canvas & Paddles designs
                     final_text = "Player 1 Wins the GAME!" if left_score > right_score else "Player 2 Wins the GAME!"
                     result = Score_font.render(final_text, 1, White)
                     screen.blit(result, (width//2 - result.get_width()//2, height//2 - result.get_height()//2))
-                    winsound.PlaySound("Game Final Win.wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
+                    final_win_sound.play()
                     pygame.display.update()
                     pygame.time.delay(3000)
                     run = False
