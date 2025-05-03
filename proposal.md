@@ -1,4 +1,4 @@
-# Retro_Pong_GO!🏓
+# Retro Pong GO!🏓
 
 ## Repository
 <https://github.com/DannaBanuelos/Retro_Pong_Go.git >
@@ -11,7 +11,7 @@
 - Interactive Virtual Board 
 	- Generates a virtual Board using Python `pygame` 
 - Interactive Audio Input
-	- Game plays sound when interacting with its environment using `pyaudio`/ `sounddevice` 
+	- Game plays sound when interacting with its environment using `pyaudio`/ `windsound` 
 - Level Up
 	- Game level up 1 level each time a player wins a match with `pygame`
 - Point Counter
