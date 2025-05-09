@@ -24,5 +24,5 @@ Based on the famous Atari game `PONG`, **Retro Pong GO!** is an interactive virt
 cd src project.py
 
 ## Programming Credits
-- `Tech with Tim` - https://youtu.be/YZknoOWCaj4
-- `TokyoEdtech` - https://www.youtube.com/watch?v=vVGTZlnnX3U
+- `Tech with Tim` - https://www.youtube.com/watch?v=vVGTZlnnX3U
+- `TokyoEdtech` - https://youtu.be/YZknoOWCaj4
