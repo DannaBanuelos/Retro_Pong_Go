@@ -1,4 +1,3 @@
 pygame
 pygame.mixer
 pygame.init()
-.WAV SFX Audio
