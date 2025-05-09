@@ -3,7 +3,7 @@
 Where 10 points gives you the WIN!
 
 ## Demo
-**Demo Video:** https://youtu.be/6RxvtAgRCsA
+Demo Video:** https://youtu.be/6RxvtAgRCsA
 
 ## Github Repository 
 **Repo:** https://github.com/DannaBanuelos/Retro_Pong_Go.git
@@ -18,7 +18,7 @@ Based on the famous Atari game `PONG`, **Retro Pong GO!** is an interactive virt
 - **Color Palette** Red and Blue colors were implemented to differentiate the paddles of player 1 and 2, green for the levels to keep track of the game's progress, and White for the ball and game points
 
 ## Repository Structure
-**RETRO_PONG_GO** || Sounds file (sounds/ 5 .WAV SFX Sounds) || project.py file (final project) || proposal.md file (explaining the different outcomes of the project) || README.md file (Final explanation of the Project) || requirements.txt (project libraries) ||
+*RETRO_PONG_GO* || Sounds file (sounds/ 5 .WAV SFX Sounds) || project.py file (final project) || proposal.md file (explaining the different outcomes of the project) || README.md file (Final explanation of the Project) || requirements.txt (project libraries) ||
 
 ## Run Program
 cd src project.py
